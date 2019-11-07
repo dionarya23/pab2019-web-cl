@@ -6,6 +6,16 @@
     <body>
 
         <h1 class="heading">Halaman Home</h1>
+        <br />
+
+        <ul>
+            <% artikels.forEach(function(artikel) { %>
+                <li>
+                    
+                    <a href="/artikel/<%= artikel.id_artikel %>"><%= artikel.title %></a> - 
+                    <%= artikel.content %></li>
+            <% }); %>
+        </ul>
 
     </body>
 </html>
