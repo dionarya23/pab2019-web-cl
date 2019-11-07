@@ -1,6 +1,7 @@
 const db = require('../config/connection');
 
 module.exports = {
+    
     home(req, res) {
         const query = "SELECT * FROM artikel";
         db.query(query, function (err, result, fields) {
@@ -29,6 +30,7 @@ module.exports = {
             res.redirect('/');
         })
     },
+
     showAdd(req, res) {
         res.render('post');
     }
